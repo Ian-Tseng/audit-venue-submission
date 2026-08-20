@@ -4,6 +4,14 @@ Owner: Ian-Tseng. Package: skills/audit-venue-submission/.
 
 ## Release gates
 
+Before enabling managed repair, verify the policy/caller exact SHA agreement,
+the `managed-repair-ready` label, required reviewers on both fixed protected
+environments, explicit `OPENAI_API_KEY` passing, the Actions PR setting, and a
+successful `workflow_dispatch` dry run. This repository is canary 2 and stays
+disabled until canary 1 passes. A managed draft never authorizes evidence
+acceptance, merge, release, publication, installed replacement, or activation.
+Roll back policy and caller SHA together.
+
 1. Confirm the worktree and reachable history contain no credentials,
    confidential manuscripts, reviewer material, or private machine paths.
 2. Synchronize VERSION, root and packaged CITATION.cff,
@@ -25,8 +33,8 @@ Owner: Ian-Tseng. Package: skills/audit-venue-submission/.
 7. From exact merged main:
 
        gh skill publish .\skills --dry-run
-       gh skill publish .\skills --tag v0.1.0
-       gh release verify v0.1.0
+       gh skill publish .\skills --tag v0.1.1
+       gh release verify v0.1.1
 
 8. In separate disposable homes and a neutral consumer directory, test public
    preview, Codex install/list/update, Claude Code install/list/update, package

@@ -182,3 +182,42 @@ Lead with the outcome. Include:
 - explicit readiness state: local files, portal state, and overall submission.
 
 Never hide uncertainty, treat a successful build as proof of compliance, or infer that funding pays an APC without confirmation.
+
+## Finish with managed maintenance and one quality receipt
+
+After completing the substantive audit and immediately before the final
+response, run:
+
+```text
+<python-3> <skill-root>/scripts/update_policy.py --format json maintain
+```
+
+Maintenance is consent-gated, leased, and restricted to one clean, unpinned,
+user-scope GitHub CLI installation from `Ian-Tseng/audit-venue-submission`.
+It must not replace or shorten the audit. Append its `message` and `action`
+only when `emit` is true; a verified replacement activates on the next
+invocation.
+
+Then emit exactly one content-free outcome receipt:
+
+```text
+<python-3> <skill-root>/scripts/skill_outcome.py --format json emit \
+  --outcome <completed|completed_with_limitations|failed> \
+  --quality-signal <claim_evidence_gap|lifecycle_inconsistency|documentation_mismatch|internal_failure|no_issue>
+```
+
+Append only the returned `SKILL_OUTCOME_RECEIPT_V1:` marker as the final line.
+Use `no_issue` when no reusable skill-quality follow-up is warranted. The
+marker contains no manuscript, finding, path, prompt, log, or patch. It permits
+an installed `analyze-project-claims` adapter to create one local proposal;
+it never authorizes an issue, edit, update, merge, release, or upload. Any
+public issue remains a separate, twice-confirmed action restricted to the
+`Ian-Tseng` owner boundary.
+
+Repository-side repair is separate from this invocation. An owner-reviewed
+`managed-repair-ready` issue may enter the full-SHA-pinned central workflow,
+but the label is eligibility only: protected environments separately approve
+credential-free candidate work and draft publication. The workflow cannot
+accept evidence, merge, release, publish, update this installation, or prove
+fresh activation. Never bypass the native updater or send project content as
+feedback.

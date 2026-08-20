@@ -35,18 +35,22 @@ runtime checks.
 
 ## Update
 
-Updates are explicit and user-controlled:
+Updates remain user-controlled. The installed skill asks once before enabling
+notification or automatic replacement, verifies one clean GitHub-managed
+user installation, and checks through a 24-hour lease after substantive use:
 
     gh skill update audit-venue-submission --dry-run
     gh skill update audit-venue-submission
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-venue-submission skills/audit-venue-submission/SKILL.md --agent codex --scope user --pin v0.1.0
+    gh skill install Ian-Tseng/audit-venue-submission skills/audit-venue-submission/SKILL.md --agent codex --scope user --pin v0.1.1
 
-This release does not run an automatic network updater or send findings to the
-owner. Those behaviors require separate consent, identity, replay, and
-visibility contracts.
+This release has a consent-gated managed updater and a content-free quality
+receipt. Both run after the substantive result and never authorize telemetry,
+issue submission, file upload, or feedback transport. A compatible
+`analyze-project-claims` adapter may create one local proposal; any public
+issue requires separate exact approval.
 
 ## Local evidence helpers
 
@@ -68,6 +72,17 @@ The Python standard library covers text, DOCX, and ZIP checks. PDF text and
 metadata inspection is enhanced when the optional pypdf package is installed;
 its absence is reported as an evidence gap rather than silently treated as a
 pass.
+
+## GitHub-managed repair boundary
+
+This repository carries one closed policy and one thin caller pinned to analyzer
+workflow commit `1412332c1c5a0e7e25e4afc429063f2381598851`. It copies no central repair implementation. A
+label is triage eligibility only; protected environments gate the agent and
+draft publication separately. Repair remains disabled until method passes its
+hosted canary and venue provisioning is read back.
+
+See the immutable [managed fleet quickstart](https://github.com/Ian-Tseng/analyze-project-claims/blob/1412332c1c5a0e7e25e4afc429063f2381598851/docs/MANAGED_FLEET_QUICKSTART.md)
+and [operations runbook](https://github.com/Ian-Tseng/analyze-project-claims/blob/1412332c1c5a0e7e25e4afc429063f2381598851/docs/MANAGED_FLEET_OPERATIONS.md).
 
 ## Development
 
