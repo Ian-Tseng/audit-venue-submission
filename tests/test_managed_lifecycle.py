@@ -29,9 +29,10 @@ class ManagedLifecycleTests(unittest.TestCase):
         policy = json.loads((ROOT / ".github" / "managed-skill-policy.json").read_text(encoding="utf-8"))
         caller = (ROOT / ".github" / "workflows" / "managed-skill-repair.yml").read_text(encoding="utf-8")
         self.assertEqual(policy["repository"], {"default_branch": "main", "full_name": "Ian-Tseng/audit-venue-submission", "id": 1340376682})
-        self.assertEqual(policy["workflow"]["sha"], "1412332c1c5a0e7e25e4afc429063f2381598851")
+        self.assertEqual(policy["workflow"]["sha"], "a8b137b33535b585b4ebbb5f92852a79148db071")
         self.assertFalse(policy["enabled"])
-        self.assertIn("@1412332c1c5a0e7e25e4afc429063f2381598851", caller)
+        self.assertIn("@a8b137b33535b585b4ebbb5f92852a79148db071", caller)
+        self.assertIn("workflow-sha: a8b137b33535b585b4ebbb5f92852a79148db071", caller)
         self.assertNotIn("secrets: inherit", caller)
         self.assertNotIn("gh pr create", caller)
 
