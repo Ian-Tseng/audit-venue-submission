@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Venue Submission"
+  short_description: "Audit venue rules, claim chains, and artifacts"
+  default_prompt: "Use $audit-venue-submission to audit venue compliance, cross-section claim chains, terminology, and run-aware alignment across the generated submission package."

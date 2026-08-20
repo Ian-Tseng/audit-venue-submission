@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "skill_name": "audit-venue-submission",
+  "algorithm": "sha256",
+  "text_normalization": "utf8-lf-v1",
+  "skill_normalization": "canonical-frontmatter-v1-without-github-metadata",
+  "files": [
+    {
+      "path": "CITATION.cff",
+      "sha256": "b9f74db5e562a68b7cdbdc7dcdeaf767509c8585629ccfe9433f5de9353f3f02"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "f36e4e8795a747e3fc05393800891a07d4d93487fb031dbe1b895e5a29c8eb04"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "656a8abadcfa2b4c16795138a3143294cc8027bd7fcba7129cad6797730e37ec"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "fa9052271ad3e9742dbfd5902a3a024e4fa9d61a20b51a86a875ad93db7c0470"
+    },
+    {
+      "path": "references/general-guide.md",
+      "sha256": "5ee0d4b67bcc4732fb0f3d1cd7e609d6e6454af22647d6d09c18a30560ee2af6"
+    },
+    {
+      "path": "references/package-version.json",
+      "sha256": "c8d838744535a5043249c9cb124959f579770ceedd4421d91f5202caf86a273b"
+    },
+    {
+      "path": "scripts/audit_docx_text_parts.py",
+      "sha256": "ee5ea0825486f574b486393a4a886eacbcab2f487ce3f2d402d77cb91d5c45d5"
+    },
+    {
+      "path": "scripts/audit_submission.py",
+      "sha256": "a1dc248934eb237b21cba6e87bf6168eb4017308ab9967e56505706db8ab4020"
+    },
+    {
+      "path": "scripts/audit_terminology.py",
+      "sha256": "5cb297aa4bd820e66aa9018617f2841cabf989433d8cbacd33cb4efc9e68a166"
+    },
+    {
+      "path": "scripts/package_integrity.py",
+      "sha256": "932cf0644f2d7a1e05d371d01cb88f47f19b479fd06966647dd61d551b3d9ffe"
+    },
+    {
+      "path": "scripts/path_contract.py",
+      "sha256": "8bfb3031aeb6be7a15fe10b729893a512f3612d921858c07adcac3c46ff3a5da"
+    },
+    {
+      "path": "scripts/terminology_contract.py",
+      "sha256": "5e1168b786908578ca2f80532ddd05f65e88d4efaa0415b79313fe2f353e95b4"
+    }
+  ]
+}
