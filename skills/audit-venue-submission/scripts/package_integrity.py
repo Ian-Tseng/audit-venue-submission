@@ -159,7 +159,6 @@ def build_manifest(skill_root: Path) -> dict[str, object]:
         "schema_version": 1,
         "skill_name": SKILL_NAME,
         "algorithm": "sha256",
-        "text_normalization": "utf8-lf-v1",
         "skill_normalization": "canonical-frontmatter-v1-without-github-metadata",
         "files": [
             {"path": relative, "sha256": file_digest(relative, path)}
