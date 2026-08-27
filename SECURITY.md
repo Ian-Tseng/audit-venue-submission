@@ -11,6 +11,9 @@ data in a public issue.
   exports are untrusted input.
 - Helpers are local collectors. They make no network requests and do not submit
   files.
+- Confidential intake must establish authorization, current venue AI-policy
+  review, permitted assistance, local-only processing, human accountability,
+  conflicts handling, and retention before unpublished content is processed.
 - Input and output paths must remain beneath the user-declared root.
 - Archives are inspected without extraction and with entry/size bounds.
 - Reports name secret categories without echoing secret values.

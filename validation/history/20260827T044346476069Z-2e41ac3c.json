@@ -1,0 +1,222 @@
+{
+  "bindings": [
+    {
+      "claim_id": "claim:confidential-intake-supported",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-intake-supported",
+      "evidence_id": "evidence:intake-runtime",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:guideline-selection-supported",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:guideline-selection-supported",
+      "evidence_id": "evidence:guideline-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "evidence_id": "evidence:publishing-boundary",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_digest": "98a50d4c883b5dc3402db4522b5615af10e92aa70ee2117ab3d6c348dec8b811",
+      "claim_id": "claim:confidential-intake-supported",
+      "element_ref": {
+        "component_id": "confidential-intake-and-guidelines",
+        "element_id": "authorization-confidentiality-intake"
+      },
+      "material": true,
+      "rationale": "The bounded local intake runtime and 24-test suite cover authorization, confidentiality, external-processing refusal, size limits, and content-minimized output.",
+      "statement": "The v0.2.0 release candidate provides a locally tested confidential submission intake that fails closed without authorization and does not echo manuscript or reviewer content.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "cfa0f968aa80cc0cff337867244b15c6190eb16fcfb77feb34d6969bcc934ec1",
+      "claim_id": "claim:guideline-selection-supported",
+      "element_ref": {
+        "component_id": "confidential-intake-and-guidelines",
+        "element_id": "non-scoring-guideline-selection"
+      },
+      "material": true,
+      "rationale": "The selector and reference require current venue confirmation and return applicable guideline families without scoring a submission or claiming compliance.",
+      "statement": "The v0.2.0 candidate can select relevant reporting-guideline families from non-confidential study metadata without grading the submission or claiming venue compliance.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "c6a291a4d5015a97029ef7342d19c50deb399e0fd03fc512e3055bfaf4a3235b",
+      "claim_id": "claim:package-candidate-verified",
+      "element_ref": {
+        "component_id": "release-package-and-lifecycle",
+        "element_id": "release-identity-and-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted receipt records 24 passing tests, deterministic package verification, official skill validation, and an outbound-free publisher dry-run.",
+      "statement": "The local v0.2.0 package candidate matches its deterministic manifest and passes the official skill validator.",
+      "status": "supported"
+    },
+    {
+      "claim_digest": "e2c392c8748cf15f4fdfc2dcf69a6e007c8d2bfdc74a13348cb7294b8a31b1a5",
+      "claim_id": "claim:public-release-complete",
+      "element_ref": {
+        "component_id": "release-package-and-lifecycle",
+        "element_id": "public-release-gates"
+      },
+      "material": true,
+      "rationale": "The PR, exact-main, protected-tag, publication, public install/update, and fresh activation gates have not yet run for v0.2.0.",
+      "statement": "The v0.2.0 public release and fresh consumer activation have completed.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:release-receipt",
+      "freshness": "current",
+      "identity_sha256": "e66686c65ce93343266998d48ed50aa32b5d19c3e7b094439337640ca70eb1a1",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "The persisted local receipt records 24 passing tests, package verification, official validation, and an outbound-free publisher dry-run while leaving remote lifecycle and submission-validity gates pending.",
+      "selection_sha256": "141a8a3c4831dc997dfd975da7007b046c31277d9642121ef36c5499b8d51eba",
+      "source": {
+        "byte_size": 1256,
+        "kind": "file",
+        "media_type": "application/json",
+        "path": "validation/release-candidate-test-receipt.json",
+        "sha256": "141a8a3c4831dc997dfd975da7007b046c31277d9642121ef36c5499b8d51eba"
+      }
+    },
+    {
+      "evidence_id": "evidence:intake-runtime",
+      "freshness": "current",
+      "identity_sha256": "791fa12465def071c96215137960c65add2ed4306fadb15ddbfc1d894b604b5d",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The bounded local parser validates authorization, confidentiality, external-processing refusal, study metadata, and emits only counts, states, guideline identifiers, and issue codes.",
+      "selection_sha256": "bde7dd71b0924640414d976d21a2d2ae64d3229914aabcf3b22bb9eb8371ce63",
+      "source": {
+        "byte_size": 10507,
+        "kind": "file",
+        "media_type": "text/x-python",
+        "path": "skills/audit-venue-submission/scripts/submission_intake.py",
+        "sha256": "bde7dd71b0924640414d976d21a2d2ae64d3229914aabcf3b22bb9eb8371ce63"
+      }
+    },
+    {
+      "evidence_id": "evidence:guideline-reference",
+      "freshness": "current",
+      "identity_sha256": "a9dd024e719cf1ae866fa548551bffa6233f95a79b25bec1b5a7f48256a5715f",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged reference separates current venue instructions from EQUATOR-family selection and forbids treating selection as scoring or compliance proof.",
+      "selection_sha256": "c620cf3d408a4cc95fadd9978d2b394717f3d0ebc973c068a60816a9b4146281",
+      "source": {
+        "byte_size": 2474,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+        "sha256": "c620cf3d408a4cc95fadd9978d2b394717f3d0ebc973c068a60816a9b4146281"
+      }
+    },
+    {
+      "evidence_id": "evidence:publishing-boundary",
+      "freshness": "current",
+      "identity_sha256": "302d55611ff2320f53ed70b0e31e3ebb097cec84eead342b96636a7ef74f9a45",
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "The publishing guide keeps PR CI, exact-main CI, tag protection, publication, public installation, update, and fresh activation as separate future gates.",
+      "selection_sha256": "d67f402254fbcfb2e0163b57d1e85a4225a5228e47d5b65413713984be881b02",
+      "source": {
+        "byte_size": 2139,
+        "kind": "file",
+        "media_type": "application/octet-stream",
+        "path": "PUBLISHING.md",
+        "sha256": "d67f402254fbcfb2e0163b57d1e85a4225a5228e47d5b65413713984be881b02"
+      }
+    }
+  ],
+  "integrity": {
+    "canonical_payload_sha256": "5650bd579d8f5461882189f2cad30dc9e3fcb22c9b47624e0303d2322540b95f",
+    "output_schema_sha256": "a2a009aeb319922010cdf3e5702884fbe55d013dc3f2f09c3f64914299820e65",
+    "recorder_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63",
+    "renderer_id": "evidence-bound-markdown-v1",
+    "renderer_sha256": "c95e9ac13e8156b5c959153556a86d4e182ffeba5195530133cda9c675fb5d63"
+  },
+  "limitations": [],
+  "record_kind": "evidence_bound_audit_record",
+  "scan": {
+    "accepted_map": {
+      "map_id": "component-map-c3c150dd44ad",
+      "path": "validation/component-map/accepted-map.json",
+      "sha256": "c49e5600d0576ed662d709f0fbf69cfc6df819010966f0a6c5fd6510e26ac4a8"
+    },
+    "authority": [
+      "VERSION",
+      "skills/audit-venue-submission/SKILL.md",
+      "skills/audit-venue-submission/scripts/submission_intake.py",
+      "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+      "skills/audit-venue-submission/references/package-manifest.json",
+      "validation/release-candidate-test-receipt.json"
+    ],
+    "engine_identity": {
+      "engine_digest": "7e713ae78e8bd0008926008c75fc4ae0a977f82cc9cc23158cc927c212255f6b",
+      "engine_name": "component-evidence",
+      "engine_version": "1.3.0",
+      "map_schema_version": "1.0",
+      "provider_kind": "embedded",
+      "receipt_protocol_version": "2.0",
+      "status": "verified"
+    },
+    "objective": "Determine which local audit-venue-submission v0.2.0 confidential intake, guideline-selection, and package claims are supported before public lifecycle gates.",
+    "recorded_at_utc": "2026-08-27T04:43:46.476069Z",
+    "recorder_version": "2.1.0",
+    "scan_id": "20260827T044346476069Z-2e41ac3c",
+    "scope": [
+      "confidential submission intake",
+      "non-scoring reporting-guideline selection",
+      "local package integrity and validation",
+      "pending public release lifecycle"
+    ],
+    "skill_name": "analyze-project-claims",
+    "skill_sha256": "b0c29b21680f02657af6533fba19c94067b44f1e651408c7b1f835c920b9a260"
+  },
+  "schema_version": "2.0",
+  "summary": {
+    "claim_boundary_ids": [],
+    "claim_count": 4,
+    "claim_counts": {
+      "supported": 3,
+      "untested": 1
+    },
+    "evidence_count": 4,
+    "material_claim_count": 4,
+    "no_supported_claim": false,
+    "scan_status": "PARTIAL",
+    "strongest_safe_claim": "The v0.2.0 release candidate provides a locally tested confidential submission intake that fails closed without authorization and does not echo manuscript or reviewer content.",
+    "strongest_safe_claim_id": "claim:confidential-intake-supported",
+    "unresolved_uncertainties": [
+      "PR CI, exact merged-main CI, immutable publication, public install/update, and fresh client activation have not yet been observed.",
+      "The local structural checks do not establish venue compliance or scientific validity for any specific submission."
+    ]
+  }
+}

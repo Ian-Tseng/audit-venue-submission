@@ -1,0 +1,52 @@
+{
+  "accepted_map_id": "component-map-c3c150dd44ad",
+  "action": "drift_detected",
+  "candidate_map_id": "component-map-2761aab791f3",
+  "changes": {
+    "added_components": [],
+    "added_elements": [],
+    "changed_components": [],
+    "changed_elements": [],
+    "contract_changes": [],
+    "removed_components": [],
+    "removed_elements": [],
+    "source_changes": [
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "PUBLISHING.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "README.md"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-venue-submission/references/package-manifest.json"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "skills/audit-venue-submission/scripts/submission_intake.py"
+      },
+      {
+        "fields": [
+          "sha256"
+        ],
+        "source": "tests/test_submission_intake.py"
+      }
+    ]
+  },
+  "integrity": {
+    "canonical_payload_sha256": "df878ce2835f436c702f1d355ec0346708862a41d26475767625827bbdd443e2"
+  },
+  "recorded_at_utc": "2026-08-27T05:11:20.313434Z",
+  "scan_id": "20260827T051120313434Z-22ab04ed",
+  "schema_version": "1.0"
+}

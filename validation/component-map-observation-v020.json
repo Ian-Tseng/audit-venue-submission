@@ -1,0 +1,306 @@
+{
+  "objective": "Map the audit-venue-submission v0.2.0 release candidate's public interface, confidential local intake, non-scoring reporting-guideline selection, deterministic submission collectors, package integrity, managed maintenance and repair boundaries, and pending public lifecycle gates.",
+  "scope": [
+    "VERSION",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "README.md",
+    "PUBLISHING.md",
+    "SECURITY.md",
+    ".github/workflows/validate.yml",
+    ".github/workflows/managed-skill-repair.yml",
+    ".github/managed-skill-policy.json",
+    "skills/audit-venue-submission/CITATION.cff",
+    "skills/audit-venue-submission/LICENSE",
+    "skills/audit-venue-submission/SKILL.md",
+    "skills/audit-venue-submission/agents/openai.yaml",
+    "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+    "skills/audit-venue-submission/references/general-guide.md",
+    "skills/audit-venue-submission/references/package-manifest.json",
+    "skills/audit-venue-submission/references/package-version.json",
+    "skills/audit-venue-submission/references/skill-outcome-receipt.schema.json",
+    "skills/audit-venue-submission/scripts/_internal/safe_process.py",
+    "skills/audit-venue-submission/scripts/audit_docx_text_parts.py",
+    "skills/audit-venue-submission/scripts/audit_submission.py",
+    "skills/audit-venue-submission/scripts/audit_terminology.py",
+    "skills/audit-venue-submission/scripts/package_integrity.py",
+    "skills/audit-venue-submission/scripts/path_contract.py",
+    "skills/audit-venue-submission/scripts/skill_outcome.py",
+    "skills/audit-venue-submission/scripts/submission_intake.py",
+    "skills/audit-venue-submission/scripts/terminology_contract.py",
+    "skills/audit-venue-submission/scripts/update_policy.py",
+    "tests/test_audit_venue_components.py",
+    "tests/test_managed_lifecycle.py",
+    "tests/test_package_contract.py",
+    "tests/test_submission_intake.py"
+  ],
+  "authority": [
+    "VERSION",
+    "CITATION.cff",
+    "skills/audit-venue-submission/SKILL.md",
+    "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+    "skills/audit-venue-submission/references/general-guide.md",
+    "skills/audit-venue-submission/references/package-manifest.json",
+    "skills/audit-venue-submission/references/package-version.json",
+    "skills/audit-venue-submission/scripts/submission_intake.py",
+    "skills/audit-venue-submission/scripts/package_integrity.py"
+  ],
+  "components": [
+    {
+      "component_id": "public-skill-interface",
+      "component_type": "distribution-and-agent-interface",
+      "elements": [
+        {
+          "element_id": "routing-install-and-boundaries",
+          "target": "One installable package exposes Codex and Claude Code instructions, current-source venue auditing, local-only helpers, and explicit non-submission and scientific-validity boundaries.",
+          "relation_type": "validated_by",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "README.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/SKILL.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/agents/openai.yaml",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_package_contract.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "Mapped public instructions and regressions define distribution, routing, and evidence boundaries; installation and live invocation remain external.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "confidential-intake-and-guidelines",
+      "component_type": "local-intake-and-guidance-selector",
+      "elements": [
+        {
+          "element_id": "authorization-confidentiality-intake",
+          "target": "A bounded local JSON intake blocks unpublished-content processing unless authorization, confidentiality and venue AI policy, permitted assistance, local-only processing, human accountability, conflicts, and retention are explicitly resolved.",
+          "relation_type": "validated_by",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "skills/audit-venue-submission/SKILL.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/submission_intake.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_submission_intake.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "Mapped code and tests define fail-closed local intake and content-minimized reporting without network transport; the record itself does not grant authorization.",
+          "required_repair": null
+        },
+        {
+          "element_id": "non-scoring-guideline-selection",
+          "target": "A declared study design maps to candidate main reporting guidelines and current official entry points while explicitly refusing compliance scoring and requiring fresh guideline, extension, and venue confirmation.",
+          "relation_type": "validated_by",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/submission_intake.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_submission_intake.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "The mapped selector supports candidate discovery and non-scoring coverage tracking only; design classification and checklist compliance remain human-reviewed, time-sensitive claims.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "venue-audit-collectors",
+      "component_type": "bounded-local-evidence-collectors",
+      "elements": [
+        {
+          "element_id": "submission-terminology-and-docx",
+          "target": "Local root-bounded collectors inspect selected submission files, terminology scopes, safe archives, and visible/deleted/comment DOCX surfaces without submitting artifacts.",
+          "relation_type": "validated_by",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "skills/audit-venue-submission/scripts/audit_submission.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/audit_terminology.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/terminology_contract.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/audit_docx_text_parts.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/path_contract.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_audit_venue_components.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "Mapped collectors and regressions define bounded local structural evidence. They do not replace current official-rule checks, native rendering, or scientific review.",
+          "required_repair": null
+        }
+      ]
+    },
+    {
+      "component_id": "release-package-and-lifecycle",
+      "component_type": "integrity-update-repair-and-release",
+      "elements": [
+        {
+          "element_id": "release-identity-and-integrity",
+          "target": "Version, citation, changelog, packaged version, and manifest define one v0.2.0 MIT candidate whose ordinary package files are integrity-bound.",
+          "relation_type": "validated_by",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "VERSION",
+              "locator": "line:1"
+            },
+            {
+              "source": "CITATION.cff",
+              "locator": "whole-file"
+            },
+            {
+              "source": "CHANGELOG.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/references/package-version.json",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/references/package-manifest.json",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/package_integrity.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_package_contract.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "Mapped package authorities and regressions define one local v0.2.0 candidate; public bytes and activation remain pending.",
+          "required_repair": null
+        },
+        {
+          "element_id": "managed-maintenance-and-repair-boundary",
+          "target": "Consent-gated update maintenance, content-free quality receipts, and one disabled full-SHA-pinned owner-triaged repair caller remain separate from evidence acceptance, merge, release, installed replacement, and activation.",
+          "relation_type": "bounds",
+          "method": "inspected",
+          "check_status": "PASS",
+          "claim_status": "supported",
+          "evidence": [
+            {
+              "source": "skills/audit-venue-submission/SKILL.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/references/skill-outcome-receipt.schema.json",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/_internal/safe_process.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/skill_outcome.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": "skills/audit-venue-submission/scripts/update_policy.py",
+              "locator": "whole-file"
+            },
+            {
+              "source": ".github/managed-skill-policy.json",
+              "locator": "whole-file"
+            },
+            {
+              "source": ".github/workflows/managed-skill-repair.yml",
+              "locator": "whole-file"
+            },
+            {
+              "source": "tests/test_managed_lifecycle.py",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "Mapped maintenance and repair sources define consent, owner, credential, and lifecycle separations; hosted execution is unobserved.",
+          "required_repair": null
+        },
+        {
+          "element_id": "public-release-gates",
+          "target": "PR/main CI, protected immutable tagging, publication, public install/update, and fresh client activation remain required external gates.",
+          "relation_type": "bounds",
+          "method": "not_tested",
+          "check_status": "PENDING",
+          "claim_status": "untested",
+          "evidence": [
+            {
+              "source": "README.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": "PUBLISHING.md",
+              "locator": "whole-file"
+            },
+            {
+              "source": ".github/workflows/validate.yml",
+              "locator": "whole-file"
+            }
+          ],
+          "safe_interpretation": "The local candidate has not completed public v0.2.0 lifecycle gates.",
+          "required_repair": "Complete the documented external gates without broadening their evidence scope."
+        }
+      ]
+    }
+  ],
+  "strongest_safe_claim": "The local audit-venue-submission v0.2.0 candidate is structurally mapped across confidential intake, non-scoring reporting-guideline selection, bounded submission collectors, package integrity, managed maintenance, and owner-gated repair boundaries.",
+  "claim_boundary": "This structural map and local source/test inspection do not establish authorization for any particular manuscript, venue compliance, scientific validity, public v0.2.0 CI or publication, public consumer installation, client activation, portal submission, or hosted managed-repair execution.",
+  "unresolved_uncertainties": [
+    "The v0.2.0 PR and exact-main CI have not passed.",
+    "The v0.2.0 tag and immutable release do not exist.",
+    "Public v0.2.0 install/update and fresh Codex or Claude Code activation are unobserved.",
+    "Each project still requires current first-party venue and guideline checks, human applicability review, native artifact inspection, and portal verification."
+  ]
+}

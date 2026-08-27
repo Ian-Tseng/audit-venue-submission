@@ -1,0 +1,156 @@
+{
+  "authority": [
+    "VERSION",
+    "skills/audit-venue-submission/SKILL.md",
+    "skills/audit-venue-submission/scripts/submission_intake.py",
+    "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md",
+    "skills/audit-venue-submission/references/package-manifest.json",
+    "validation/release-candidate-test-receipt.json"
+  ],
+  "bindings": [
+    {
+      "claim_id": "claim:confidential-intake-supported",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:confidential-intake-supported",
+      "evidence_id": "evidence:intake-runtime",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:guideline-selection-supported",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:guideline-selection-supported",
+      "evidence_id": "evidence:guideline-reference",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "evidence_id": "evidence:release-receipt",
+      "role": "supports"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "evidence_id": "evidence:publishing-boundary",
+      "role": "context"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim:confidential-intake-supported",
+      "element_ref": {
+        "component_id": "confidential-intake-and-guidelines",
+        "element_id": "authorization-confidentiality-intake"
+      },
+      "material": true,
+      "rationale": "The bounded local intake runtime and 33-test suite cover authorization, confidentiality, external-processing refusal, size and no-follow link boundaries, and content-minimized output.",
+      "statement": "The v0.2.0 release candidate provides a locally tested confidential submission intake that fails closed without authorization and does not echo manuscript or reviewer content.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:guideline-selection-supported",
+      "element_ref": {
+        "component_id": "confidential-intake-and-guidelines",
+        "element_id": "non-scoring-guideline-selection"
+      },
+      "material": true,
+      "rationale": "The selector and reference require current venue confirmation and return applicable guideline families without scoring a submission or claiming compliance.",
+      "statement": "The v0.2.0 candidate can select relevant reporting-guideline families from non-confidential study metadata without grading the submission or claiming venue compliance.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:package-candidate-verified",
+      "element_ref": {
+        "component_id": "release-package-and-lifecycle",
+        "element_id": "release-identity-and-integrity"
+      },
+      "material": true,
+      "rationale": "The persisted receipt records 33 passing tests, deterministic package verification, official skill validation, and an outbound-free publisher dry-run.",
+      "statement": "The local v0.2.0 package candidate matches its deterministic manifest and passes the official skill validator.",
+      "status": "supported"
+    },
+    {
+      "claim_id": "claim:public-release-complete",
+      "element_ref": {
+        "component_id": "release-package-and-lifecycle",
+        "element_id": "public-release-gates"
+      },
+      "material": true,
+      "rationale": "The PR, exact-main, protected-tag, publication, public install/update, and fresh activation gates have not yet run for v0.2.0.",
+      "statement": "The v0.2.0 public release and fresh consumer activation have completed.",
+      "status": "untested"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "evidence:release-receipt",
+      "source": {
+        "kind": "file",
+        "path": "validation/release-candidate-test-receipt.json"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "executed_test",
+      "observed_summary": "The persisted local receipt records 33 passing tests, package verification, official validation, and an outbound-free publisher dry-run while leaving remote lifecycle and submission-validity gates pending."
+    },
+    {
+      "evidence_id": "evidence:intake-runtime",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-venue-submission/scripts/submission_intake.py"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The bounded local parser validates authorization, confidentiality, external-processing refusal, study metadata, and emits only counts, states, guideline identifiers, and issue codes."
+    },
+    {
+      "evidence_id": "evidence:guideline-reference",
+      "source": {
+        "kind": "file",
+        "path": "skills/audit-venue-submission/references/confidential-intake-and-reporting-guidelines.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "inspected",
+      "observed_summary": "The packaged reference separates current venue instructions from EQUATOR-family selection and forbids treating selection as scoring or compliance proof."
+    },
+    {
+      "evidence_id": "evidence:publishing-boundary",
+      "source": {
+        "kind": "file",
+        "path": "PUBLISHING.md"
+      },
+      "locator": {
+        "kind": "whole_file"
+      },
+      "method": "not_tested",
+      "observed_summary": "The publishing guide keeps PR CI, exact-main CI, tag protection, publication, public installation, update, and fresh activation as separate future gates."
+    }
+  ],
+  "limitations": [],
+  "objective": "Determine which local audit-venue-submission v0.2.0 confidential intake, guideline-selection, and package claims are supported before public lifecycle gates.",
+  "schema_version": "2.0",
+  "scope": [
+    "confidential submission intake",
+    "non-scoring reporting-guideline selection",
+    "local package integrity and validation",
+    "pending public release lifecycle"
+  ],
+  "summary": {
+    "claim_boundary_ids": [],
+    "no_supported_claim": false,
+    "strongest_safe_claim_id": "claim:confidential-intake-supported"
+  },
+  "unresolved_uncertainties": [
+    "PR CI, exact merged-main CI, immutable publication, public install/update, and fresh client activation have not yet been observed.",
+    "The local structural checks do not establish venue compliance or scientific validity for any specific submission."
+  ]
+}

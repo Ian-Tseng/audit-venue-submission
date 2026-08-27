@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "product": "audit-venue-submission",
+  "version": "0.2.0",
+  "recorded_at_utc": "2026-08-27T05:16:56Z",
+  "tests": {
+    "command": "py -3 -X utf8 -m unittest discover -s tests -v",
+    "tests_run": 33,
+    "passed": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "package": {
+    "command": "py -3 -X utf8 skills/audit-venue-submission/scripts/package_integrity.py verify",
+    "manifest_digest": "801b5d60bcdd9b1780601a47bf8913dc7a8d3661ab60d2576712a06619f2e5ac",
+    "status": "PACKAGE_VERIFIED"
+  },
+  "official_skill_validator": {
+    "command": "py -3 -X utf8 <skill-creator-root>/scripts/quick_validate.py skills/audit-venue-submission",
+    "result": "Skill is valid!",
+    "status": "PASS"
+  },
+  "github_skill_publisher": {
+    "command": "gh skill publish .\\skills --dry-run",
+    "outbound": "NONE",
+    "status": "PASS"
+  },
+  "pending_external_gates": [
+    "release PR and exact PR-head CI",
+    "exact merged-main CI",
+    "tag protection and immutable release verification",
+    "v0.2.0 publication",
+    "fresh public Codex and Claude Code installation, update, discovery, and invocation",
+    "venue compliance and scientific validity for any specific submission"
+  ]
+}

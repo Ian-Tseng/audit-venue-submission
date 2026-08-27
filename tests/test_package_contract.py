@@ -35,7 +35,7 @@ class PackageContractTests(unittest.TestCase):
                 encoding="utf-8"
             )
         )
-        self.assertEqual(version, "0.1.1")
+        self.assertEqual(version, "0.2.0")
         self.assertEqual(package_version["skill_name"], "audit-venue-submission")
         self.assertEqual(package_version["version"], version)
         root_citation = (ROOT / "CITATION.cff").read_bytes()
@@ -76,7 +76,7 @@ class PackageContractTests(unittest.TestCase):
                 frontmatter
                 + "\nmetadata:\n"
                 + "  github-path: skills/audit-venue-submission\n"
-                + "  github-ref: refs/tags/v0.1.1\n"
+                + "  github-ref: refs/tags/v0.2.0\n"
                 + "  github-repo: "
                 + "https://github.com/Ian-Tseng/audit-venue-submission\n"
                 + "  github-tree-sha: "
@@ -150,6 +150,7 @@ class PackageContractTests(unittest.TestCase):
             "audit_terminology.py",
             "audit_docx_text_parts.py",
             "package_integrity.py",
+            "submission_intake.py",
             "update_policy.py",
             "skill_outcome.py",
         ):
