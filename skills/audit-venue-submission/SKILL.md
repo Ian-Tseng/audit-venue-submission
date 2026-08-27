@@ -17,6 +17,30 @@ Audit the saved submission package, not only its editable source. Treat current 
 5. When a user requests top-tier, Nature-style, NeurIPS-style, or AAAI-style writing guidance, use the source-backed workflow in [references/general-guide.md](references/general-guide.md): refresh current first-party sources, log exact URLs and access dates, distinguish reusable heuristics from binding venue rules, and convert accepted guidance into testable manuscript gates.
 6. Separate the venue-neutral core, venue overlay, and submission-instance record. Never convert one venue's rule into a universal requirement.
 
+## Confirm confidential intake before reading unpublished content
+
+Before processing an unpublished manuscript, peer-review file, portal export,
+author data, or restricted submission package, confirm authorization,
+confidentiality policy, current venue AI policy, permitted AI assistance,
+human accountability, conflicts handling, retention, and local-only
+processing. Do not place manuscript text, reviewer text, author identities,
+private paths, credentials, or unpublished results in web searches, issue
+drafts, telemetry, or quality receipts.
+
+Read
+[references/confidential-intake-and-reporting-guidelines.md](references/confidential-intake-and-reporting-guidelines.md)
+completely when intake or study-design reporting guidance is in scope. Validate
+one local intake record and select candidate guidelines with:
+
+```text
+<python-3> "<skill-root>/scripts/submission_intake.py" validate --intake <local-intake.json>
+<python-3> "<skill-root>/scripts/submission_intake.py" guidelines --study-design <design>
+```
+
+The helper reads no manuscript, makes no network request, echoes no submission
+content, and never scores reporting compliance. Its candidates must be
+reconfirmed against current first-party guideline, extension, and venue rules.
+
 ## Refresh official sources on every refinement
 
 Treat official venue requirements as mutable. Before every venue-specific refinement, not only before final submission:
@@ -47,6 +71,8 @@ Capture, with source evidence:
 - official template/style, accepted source types, compiler or word processor, and page/word allocation;
 - figure, table, reference, appendix, supplement, file-size, and external-link rules;
 - mandatory declarations, forms, checklists, highlights, graphical abstracts, data/code statements, funding, CRediT, AI-use disclosure, ethics, and consent;
+- applicable study-design reporting guideline candidates and extensions, with
+  non-scoring coverage states and human-verified evidence locators;
 - portal fields, author-profile requirements, corresponding-author behavior, conflicts, reviewer nominations, and required/optional upload item types.
 
 Use this authority order when sources conflict:

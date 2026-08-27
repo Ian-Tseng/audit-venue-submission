@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "CITATION.cff",
-      "sha256": "4e817d6c7f107c84513bad029fc900f622db35444afc13e80440b9e56e27d6c4"
+      "sha256": "dae3b6550e6e07c866ba86fd3609779f9257b8c8e8e2586ed176145e9cbcfb7c"
     },
     {
       "path": "LICENSE",
@@ -14,11 +14,15 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "8a8822be1e4e223ffdef03a20525b567f3f5b33455e1a841c77500cb2ccf0cba"
+      "sha256": "94f1ee20f8e03daa6cd95d7cf34cae6fe602da6d1cc3f797888367db3f6f86c5"
     },
     {
       "path": "agents/openai.yaml",
       "sha256": "fa9052271ad3e9742dbfd5902a3a024e4fa9d61a20b51a86a875ad93db7c0470"
+    },
+    {
+      "path": "references/confidential-intake-and-reporting-guidelines.md",
+      "sha256": "c620cf3d408a4cc95fadd9978d2b394717f3d0ebc973c068a60816a9b4146281"
     },
     {
       "path": "references/general-guide.md",
@@ -26,7 +30,7 @@
     },
     {
       "path": "references/package-version.json",
-      "sha256": "eac4b57cb8e027d615309517e756e073bc9a46d6107ead6c80a54815dd9eda93"
+      "sha256": "db5fd241f589c2d9b562a35b2383bf581d234c54590bfd20ce4221c4016811fa"
     },
     {
       "path": "references/skill-outcome-receipt.schema.json",
@@ -59,6 +63,10 @@
     {
       "path": "scripts/skill_outcome.py",
       "sha256": "950a47cd43bd25fbde5fd42203b947206df2b2113535818f2136b35ca9878e40"
+    },
+    {
+      "path": "scripts/submission_intake.py",
+      "sha256": "7aed56376274bb3d377e9f473f534bda06070e43c32374e337b375a1000179bd"
     },
     {
       "path": "scripts/terminology_contract.py",

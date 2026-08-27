@@ -13,6 +13,10 @@ The skill separates three claims that are often blurred:
 It never treats a successful build as proof of compliance and never submits to
 a journal or conference portal on the user's behalf.
 
+Version 0.2.0 adds confidential local intake gates and a non-scoring
+study-design reporting-guideline selector backed by current official entry
+points.
+
 ## Install
 
 Install the public standalone skill for Codex:
@@ -44,7 +48,7 @@ user installation, and checks through a 24-hour lease after substantive use:
 
 Pin a reproducible installation when needed:
 
-    gh skill install Ian-Tseng/audit-venue-submission skills/audit-venue-submission/SKILL.md --agent codex --scope user --pin v0.1.1
+    gh skill install Ian-Tseng/audit-venue-submission skills/audit-venue-submission/SKILL.md --agent codex --scope user --pin v0.2.0
 
 This release has a consent-gated managed updater and a content-free quality
 receipt. Both run after the substantive result and never authorize telemetry,
@@ -62,6 +66,8 @@ The package contains deterministic local collectors:
   scopes;
 - audit_docx_text_parts.py: visible, inserted, deleted, and comment surfaces
   across Word parts;
+- submission_intake.py: local authorization/confidentiality gates and
+  non-scoring candidate reporting-guideline coverage;
 - package_integrity.py: package manifest build and verification.
 
 All selected inputs and outputs are constrained to the declared root. The
@@ -89,7 +95,8 @@ and [operations runbook](https://github.com/Ian-Tseng/analyze-project-claims/blo
     py -3 -m unittest discover -s tests -v
     py -3 skills\audit-venue-submission\scripts\package_integrity.py verify
 
-See [PUBLISHING.md](PUBLISHING.md) for release gates,
+See the current [validation authority](validation/README.md),
+[PUBLISHING.md](PUBLISHING.md) for release gates,
 [SECURITY.md](SECURITY.md) for trust boundaries, and
 [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes.
 

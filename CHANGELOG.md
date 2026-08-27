@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented here.
 
+## 0.2.0 - 2026-08-27
+
+- Add a local confidential-intake contract for authorization, venue AI policy,
+  human accountability, conflicts, retention, and external-processing gates.
+- Add a non-scoring selector for candidate study-design reporting guidelines
+  with current official entry points and explicit extension/venue rechecking.
+- Emit content-minimized intake reports without manuscript or evidence-locator
+  echo and preserve human responsibility for applicability and compliance.
+
 ## 0.1.1 - 2026-08-20
 
 - Add a consent-gated, GitHub CLI-owned managed updater that verifies package,
