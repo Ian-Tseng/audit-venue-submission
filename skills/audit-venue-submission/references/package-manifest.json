@@ -14,7 +14,7 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "94f1ee20f8e03daa6cd95d7cf34cae6fe602da6d1cc3f797888367db3f6f86c5"
+      "sha256": "60d13754bfc5efa03df1f50344ff760be8e974eda87b02c60f556451fd4ddfa2"
     },
     {
       "path": "agents/openai.yaml",
@@ -31,6 +31,10 @@
     {
       "path": "references/package-version.json",
       "sha256": "db5fd241f589c2d9b562a35b2383bf581d234c54590bfd20ce4221c4016811fa"
+    },
+    {
+      "path": "references/review-learning.md",
+      "sha256": "b09803292166ef17a9a5bdcc1db1f2ca8663000616fa1cd8cb306f5ce9b508ca"
     },
     {
       "path": "references/skill-outcome-receipt.schema.json",

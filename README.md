@@ -105,3 +105,13 @@ See the current [validation authority](validation/README.md),
 See [CITATION.cff](CITATION.cff) and the [MIT License](LICENSE). Copies are
 included in the installed skill package and tested against the repository-root
 authorities.
+
+## Recheck, log, and reuse
+
+After substantive work, the skill follows the packaged
+[review-and-learning guide](skills/audit-venue-submission/references/review-learning.md):
+recheck affected dependencies, retain evidence-linked lessons, and promote
+validated guidance into project Markdown, decision flows, or reusable workflows.
+Unverified explanations stay provisional. Read-only audits remain read-only,
+and bounded retries cannot be reported as convergence. This workflow does not
+automatically publish feedback or accept evidence on the user's behalf.
